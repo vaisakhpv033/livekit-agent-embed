@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>SBI Mutual Fund Sales Training Simulator</title>
+  <title>AI Customer Simulator</title>
 
   <style>
     * {
@@ -15,181 +14,73 @@
     }
 
     body {
-      font-family: Inter, Arial, sans-serif;
-      background: #f5f7fa;
-      color: #1f2937;
       min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      background: linear-gradient(
+        135deg,
+        #020617 0%,
+        #0f172a 50%,
+        #111827 100%
+      );
+
+      overflow: hidden;
     }
 
     .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .hero {
-      background: white;
-      border-radius: 16px;
+      text-align: center;
       padding: 32px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      margin-bottom: 24px;
     }
 
     h1 {
-      color: #002cf2;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.03em;
       margin-bottom: 12px;
     }
 
-    .subtitle {
-      color: #6b7280;
-      font-size: 16px;
-      line-height: 1.6;
+    p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      font-weight: 400;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 20px;
-      margin-top: 24px;
+    .glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(37, 99, 235, 0.15);
+      border-radius: 50%;
+      filter: blur(120px);
+      z-index: -1;
     }
 
-    .card {
-      background: white;
-      padding: 24px;
-      border-radius: 16px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    .glow.left {
+      top: -150px;
+      left: -150px;
     }
 
-    .card h3 {
-      margin-bottom: 12px;
-      color: #002cf2;
-    }
-
-    .card ul {
-      padding-left: 20px;
-      line-height: 1.8;
-    }
-
-    .status {
-      margin-top: 24px;
-      background: #eef4ff;
-      border-left: 4px solid #002cf2;
-      padding: 16px;
-      border-radius: 8px;
-    }
-
-    .launch-box {
-      margin-top: 24px;
-      text-align: center;
-      background: white;
-      padding: 24px;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    }
-
-    .launch-box h2 {
-      margin-bottom: 10px;
-    }
-
-    .launch-box p {
-      color: #6b7280;
-      line-height: 1.6;
-    }
-
-    .footer {
-      margin-top: 30px;
-      text-align: center;
-      color: #6b7280;
-      font-size: 14px;
-    }
-
-    .highlight {
-      color: #002cf2;
-      font-weight: 600;
+    .glow.right {
+      bottom: -150px;
+      right: -150px;
     }
   </style>
 </head>
 <body>
 
-<div class="container">
+  <div class="glow left"></div>
+  <div class="glow right"></div>
 
-  <div class="hero">
-    <h1>🎙️ SBI Mutual Fund Sales Training Simulator</h1>
-
-    <p class="subtitle">
-      Practice your sales conversations with an AI-powered customer.
-      The AI behaves like a real prospective investor who has called SBI
-      Mutual Fund to learn about investment options, SIPs, risk levels,
-      taxation, and onboarding.
-    </p>
-
-    <div class="status">
-      <strong>Current Persona:</strong>
-      Young Professional Investor (Age 26)
-      <br />
-      Knowledge Level: Beginner
-      <br />
-      Risk Appetite: Moderate
-    </div>
+  <div class="container">
+    <h1>AI Customer Simulator</h1>
+    <p>Practice realistic sales conversations.</p>
   </div>
 
-  <div class="grid">
-
-    <div class="card">
-      <h3>🎯 Training Objective</h3>
-      <ul>
-        <li>Explain mutual funds clearly</li>
-        <li>Handle customer objections</li>
-        <li>Build trust</li>
-        <li>Recommend suitable products</li>
-        <li>Explain SIP vs Lump Sum</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>💡 Tips</h3>
-      <ul>
-        <li>Avoid financial jargon</li>
-        <li>Ask discovery questions</li>
-        <li>Understand customer goals</li>
-        <li>Discuss risk tolerance</li>
-        <li>Use practical examples</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>🧠 AI Customer Traits</h3>
-      <ul>
-        <li>First-time mutual fund investor</li>
-        <li>Slightly impatient</li>
-        <li>Asks follow-up questions</li>
-        <li>Skeptical of sales claims</li>
-        <li>Will not invest immediately</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="launch-box">
-    <h2>Start Training Session</h2>
-
-    <p>
-      Click the blue assistant button in the bottom-right corner
-      and begin your sales conversation.
-    </p>
-
-    <p style="margin-top:10px;">
-      The AI will act as a customer throughout the session.
-    </p>
-  </div>
-
-  <div class="footer">
-    Powered by LiveKit AI Customer Simulation
-  </div>
-
-</div>
-
-<script
+  <script
   src="https://cloud.livekit.io/embed-popup.js"
   data-lk-agent="CA_LTkDLLyjmEub"
   data-lk-color="#002CF2"
@@ -197,4 +88,3 @@
 
 </body>
 </html>
-```
